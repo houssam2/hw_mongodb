@@ -22,7 +22,7 @@ var mongoose = require("mongoose");
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 mongoose.Promise = Promise; // Leverage built in JavaScript ES6 Promises
-mongoose.connect(MONGODB_URI);// Connect to the Mongo DB
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });// Connect to the Mongo DB
 
 var PORT = process.env.PORT || 3000;
 

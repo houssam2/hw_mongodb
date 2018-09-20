@@ -1,0 +1,30 @@
+{{!-- <style media="screen">
+  li {
+    height : 100px;
+    width: 100px;
+    color: red;
+    background-color: purple;
+    margin-bottom: 30px;
+  }
+</style> --}}
+
+
+<h1 id="page-header">{{pageheader}}</h1>
+
+{{#each articles }}
+  <div class="container">
+    <div class="card">
+      <div class="card-header bg-primary">
+        <h3>
+          <a class="article-link" target="_blank" href={{url}}>{{headline}}</a>
+          <a id="btn-save" class="btn btn-success">Save</a>
+          <a id="btn-delete" class="btn btn-success">Delete</a>
+          <a id="btn-notes" class="btn btn-success">Notes</a>
+        </h3>
+      </div>
+      <div class="card-body">
+        {{summary}}
+      </div>
+    </div>
+  </div>
+{{/each}}
